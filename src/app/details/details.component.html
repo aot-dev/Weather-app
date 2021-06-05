@@ -1,0 +1,19 @@
+<div class="table-responsive table-hover">
+    <h3 style="text-align: center;">{{city}}'s Forecast for next 5 days!</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Temperature</th>
+                <th scope="col">Sea Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dayForcast of forcastData;let id = index;">
+                <th scope="row">{{id + 1}}</th>
+                <td>{{dayForcast.main.temp}}</td>
+                <td>{{dayForcast.main.sea_level}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

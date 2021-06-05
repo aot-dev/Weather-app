@@ -1,0 +1,23 @@
+<div class="table-responsive table-hover">
+    <h3 style="text-align: center;">City's Weather Home</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">City Name</th>
+                <th scope="col">Temperature</th>
+                <th scope="col">Sunrise Time</th>
+                <th scope="col">Sunset Time</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="weatherData.length;">
+            <tr *ngFor="let row of weatherData;let id = index;" (click)="goTodetails(row.name)">
+                <th scope="row">{{id + 1}}</th>
+                <td>{{row.name}}</td>
+                <td>{{row.temp}}</td>
+                <td>{{row.sunrise}}</td>
+                <td>{{row.sunset}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
